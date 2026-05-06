@@ -1,0 +1,19 @@
+{
+  "status": "commited",
+  "type": "backend",
+  "scope": "codebase",
+  "localEndpoint": "http://localhost:8080",
+  "backendAuthType": "public",
+  "executionArgs": {
+    "projectName": "mente-financeira-vista-main",
+    "projectPath": "c:\\Users\\rrps2\\Downloads\\mente-financeira-vista-main\\mente-financeira-vista-main",
+    "testIds": [],
+    "additionalInstruction": "Please test the main dashboard features: indicators (Saldo, Entradas, Saídas), the chart visibility, and the transaction list. Ensure the UI is responsive and clean.",
+    "serverMode": "development",
+    "envs": {
+      "API_KEY": "sk-user-7j_8l0jrRh9a0Uo9nby5G6_QyDxO7RzKJ-jPI7trexnaPj6EB_p67nPm6v7QhMhYuI5o2KTJp1h81n4wXVfzayznjrTWckXm6T0vxvAqnh6bNXOBPdOltx3R4CMARR9eGoY"
+    }
+  },
+  "serverPort": 52378,
+  "proxy": "http://61b63320-7c8d-4a7f-9f5e-e1cd46e46d28:gi98DNLNmsxy9iNYjKqjeGhFPh2ZeVVt@tun.testsprite.com:8080"
+}

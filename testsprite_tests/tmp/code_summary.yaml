@@ -1,0 +1,29 @@
+version: "2"
+type: frontend
+tech_stack:
+  - React
+  - Vite
+  - TypeScript
+  - Tailwind CSS
+  - Supabase
+features:
+  - name: Financial Dashboard
+    description: Real-time display of financial indicators (Balance, Income, Expenses, Loans) with charts.
+    files:
+      - src/pages/Index.tsx
+      - src/services/saldoService.ts
+  - name: Transaction History
+    description: Management and listing of financial transactions (cash flow).
+    files:
+      - src/pages/Index.tsx
+      - src/integrations/supabase/client.ts
+  - name: Loan Management
+    description: Tracking and recording of loans and their respective installments.
+    files:
+      - src/pages/Index.tsx
+      - src/services/saldoService.ts
+  - name: User Settings
+    description: Storage of user preferences and session configuration.
+    files:
+      - src/pages/Index.tsx
+known_limitations: []

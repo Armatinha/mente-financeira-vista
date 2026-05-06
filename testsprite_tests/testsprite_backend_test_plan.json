@@ -1,0 +1,620 @@
+[
+  {
+    "id": "TC001",
+    "title": "View financial dashboard summary and charts after login",
+    "description": "Verifies an authenticated user can load the dashboard and see summary indicators and a 30-day trend chart rendered.",
+    "category": "Financial Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard page to load"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify financial summary indicators are displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a 30-day trend chart is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC002",
+    "title": "Dashboard reflects changes after creating an income transaction",
+    "description": "Verifies creating an income transaction updates dashboard totals accordingly and the updated values render.",
+    "category": "Financial Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard page to load"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the transaction creation area from the dashboard"
+      },
+      {
+        "type": "action",
+        "description": "Select the transaction type as income"
+      },
+      {
+        "type": "action",
+        "description": "Fill 123.45 into the amount field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid date into the date field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the transaction form"
+      },
+      {
+        "type": "action",
+        "description": "Return to the dashboard summary view"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the dashboard balance or income total reflects the newly created transaction"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC003",
+    "title": "Create a loan and record a paid installment linked to transactions",
+    "description": "Verifies creating a loan, recording a paid installment, and then viewing the linked loan-related transaction works end-to-end.",
+    "category": "Loan Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the loans area"
+      },
+      {
+        "type": "action",
+        "description": "Start creating a new loan"
+      },
+      {
+        "type": "action",
+        "description": "Fill 1000 into the principal field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 5 into the interest rate field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 3 into the installments field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid start date into the start date field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Borrower Test into the borrower field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the loan form"
+      },
+      {
+        "type": "action",
+        "description": "Open the newly created loan details view"
+      },
+      {
+        "type": "action",
+        "description": "Start recording a new installment payment"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid installment number"
+      },
+      {
+        "type": "action",
+        "description": "Fill 100 into the installment amount field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid date into the installment date field"
+      },
+      {
+        "type": "action",
+        "description": "Mark the installment as paid"
+      },
+      {
+        "type": "action",
+        "description": "Submit the installment form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the transactions area"
+      },
+      {
+        "type": "action",
+        "description": "Filter transactions to show those linked to the loan"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify at least one transaction linked to the loan installment is displayed"
+      }
+    ],
+    "priority": "High"
+  },
+  {
+    "id": "TC004",
+    "title": "Create transaction and verify it appears in list and detail",
+    "description": "Verifies a user can create a transaction and then find it in the transaction list and open its detail view.",
+    "category": "Transaction History",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the transactions area"
+      },
+      {
+        "type": "action",
+        "description": "Start creating a new transaction"
+      },
+      {
+        "type": "action",
+        "description": "Select the transaction type as income"
+      },
+      {
+        "type": "action",
+        "description": "Fill 222.22 into the amount field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid date into the date field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Test transaction A into the description field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the transaction form"
+      },
+      {
+        "type": "action",
+        "description": "Locate the newly created transaction in the list"
+      },
+      {
+        "type": "action",
+        "description": "Open the transaction details view for that transaction"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the transaction detail view is displayed for the selected transaction"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC005",
+    "title": "Filter or search transactions by a term",
+    "description": "Verifies the user can filter or search transaction history and the list updates to match the query.",
+    "category": "Transaction History",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the transactions area"
+      },
+      {
+        "type": "action",
+        "description": "Start creating a new transaction"
+      },
+      {
+        "type": "action",
+        "description": "Select the transaction type as expense"
+      },
+      {
+        "type": "action",
+        "description": "Fill 10.00 into the amount field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid date into the date field"
+      },
+      {
+        "type": "action",
+        "description": "Fill UniqueSearchToken-987 into the description field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the transaction form"
+      },
+      {
+        "type": "action",
+        "description": "Fill UniqueSearchToken-987 into the transaction search field"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the transaction list shows results matching the search query"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC006",
+    "title": "Dashboard chart range can be changed",
+    "description": "Verifies the user can change the dashboard chart range and the chart updates to show the selected range data.",
+    "category": "Financial Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard page to load"
+      },
+      {
+        "type": "action",
+        "description": "Select a different chart range option"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the chart updates to display data for the newly selected range"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC007",
+    "title": "Transactions list shows most recent items first",
+    "description": "Verifies the transactions list sorting presents the most recent transaction at the top when sorting is set to descending.",
+    "category": "Transaction History",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the transactions area"
+      },
+      {
+        "type": "action",
+        "description": "Start creating a new transaction"
+      },
+      {
+        "type": "action",
+        "description": "Select the transaction type as income"
+      },
+      {
+        "type": "action",
+        "description": "Fill 1.00 into the amount field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid date into the date field"
+      },
+      {
+        "type": "action",
+        "description": "Fill SortCheck-Old into the description field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the transaction form"
+      },
+      {
+        "type": "action",
+        "description": "Start creating a new transaction"
+      },
+      {
+        "type": "action",
+        "description": "Select the transaction type as income"
+      },
+      {
+        "type": "action",
+        "description": "Fill 2.00 into the amount field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid date into the date field"
+      },
+      {
+        "type": "action",
+        "description": "Fill SortCheck-New into the description field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the transaction form"
+      },
+      {
+        "type": "action",
+        "description": "Set the transaction sort order to descending if a sort control exists"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the most recently created transaction appears before older transactions in the list"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC008",
+    "title": "Dashboard handles empty data state",
+    "description": "Verifies the dashboard loads successfully and shows a clear empty state when there are no transactions or loans.",
+    "category": "Financial Dashboard",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Wait for the dashboard page to load"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an empty or zeroed financial summary state is displayed"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the charts area renders without breaking and shows an empty state when applicable"
+      }
+    ],
+    "priority": "Medium"
+  },
+  {
+    "id": "TC009",
+    "title": "Transaction creation requires amount and type",
+    "description": "Verifies the transaction form prevents submission when required fields are missing and shows validation feedback.",
+    "category": "Transaction History",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the transactions area"
+      },
+      {
+        "type": "action",
+        "description": "Start creating a new transaction"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid date into the date field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the transaction form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify a required-field validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the transaction is not created and the form remains in an editable state"
+      }
+    ],
+    "priority": "Low"
+  },
+  {
+    "id": "TC010",
+    "title": "Prevent recording an installment that overpays the remaining loan balance",
+    "description": "Verifies the loan installment form blocks overpayment amounts and shows validation feedback without recording the installment.",
+    "category": "Loan Management",
+    "steps": [
+      {
+        "type": "action",
+        "description": "Navigate to the login page"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the email field with {{LOGIN_USER}}"
+      },
+      {
+        "type": "action",
+        "description": "Fill in the password field with {{LOGIN_PASSWORD}}"
+      },
+      {
+        "type": "action",
+        "description": "Submit the login form"
+      },
+      {
+        "type": "action",
+        "description": "Navigate to the loans area"
+      },
+      {
+        "type": "action",
+        "description": "Start creating a new loan"
+      },
+      {
+        "type": "action",
+        "description": "Fill 100 into the principal field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 0 into the interest rate field"
+      },
+      {
+        "type": "action",
+        "description": "Fill 1 into the installments field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid start date into the start date field"
+      },
+      {
+        "type": "action",
+        "description": "Fill Overpay Borrower into the borrower field"
+      },
+      {
+        "type": "action",
+        "description": "Submit the loan form"
+      },
+      {
+        "type": "action",
+        "description": "Open the newly created loan details view"
+      },
+      {
+        "type": "action",
+        "description": "Start recording a new installment payment"
+      },
+      {
+        "type": "action",
+        "description": "Select a valid installment number"
+      },
+      {
+        "type": "action",
+        "description": "Fill 1000 into the installment amount field"
+      },
+      {
+        "type": "action",
+        "description": "Fill a valid date into the installment date field"
+      },
+      {
+        "type": "action",
+        "description": "Mark the installment as paid"
+      },
+      {
+        "type": "action",
+        "description": "Submit the installment form"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify an overpayment validation error is visible"
+      },
+      {
+        "type": "assertion",
+        "description": "Verify the installment is not recorded"
+      }
+    ],
+    "priority": "Low"
+  }
+]
